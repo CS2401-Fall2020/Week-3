@@ -5,5 +5,5 @@ extract sub array, given a 2-D array, and 2 ranges, produce a new array that is 
 * input could be jagged
 You can assume that the input will be such that the full sub-array will exist. 
 
-### `public static boolean noneTrue(boolean[][] boolArray`
+### `public static boolean noneTrue(boolean[][] boolArray)`
 Given a boolean array, find if any of the inputs are true. 
