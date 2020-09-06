@@ -48,11 +48,6 @@ If any of the values are `true` the method returns `false`, otherwise it returns
 Notice that the previous sentence does not say that it returns `true` if all of the values are `false`, 
 this will be useful in defining one of the corner case tests. 
 
-## `tester.java`
-You will need to make 10 `Junit` tests for your code.
-Of these 7 should test various aspects of `extractSubArray` and 3 should test `noneTrue`.
-Each test also needs to have a description in a comment just before the method in the tester file. 
-
 #### Example
 If `boolArray` is 
 ```
@@ -61,6 +56,12 @@ If `boolArray` is
  [ false, false, false, false]]
 ```
 the method will return `false`.
+
+
+## `tester.java`
+You will need to make 10 `Junit` tests for your code.
+Of these 7 should test various aspects of `extractSubArray` and 3 should test `noneTrue`.
+Each test also needs to have a description in a comment just before the method in the tester file. 
 
 # Grading
 * `searchAndTest.java`
