@@ -8,7 +8,7 @@ The task will be to complete two methods in `extractAndTest.java` as well as the
 **DO NOT** change any of the method signatures from those given in the assignment, and read the instructions carefully. 
 
 ## `extractAndSearch.java`
-### `extractSubArray`
+### 1. `extractSubArray`
 The signiture of this method will be `public static int[][] extractSubArray(int[][] inArray, int rowMin, int rowMax, int colMin, int colMax)`;
 This method will return a new 2-D integer array which contains a subset of the information in the given input array. 
 The input array may be jagged. 
@@ -46,7 +46,7 @@ since rows `0` and `2` do not contain enough columns.
 using the same `inputArray` if `minRow`,`maxRow`,`minCol`,and `maxCol` are `2`,`0`,`0`,`1` respectively 
 the method would also return `null` since the row limits are in the wrong order. 
 
-### `noneTrue`
+### 2. `noneTrue`
 The signiture of this method will be `public static boolean noneTrue(boolean[][] boolArray)`.
 This method searches the 2-dimensional boolean array (possibly jagged) to see if any of the values are `true`. 
 If any of the values are `true` the method returns `false`, otherwise it returns `true`.
