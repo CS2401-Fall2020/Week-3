@@ -8,12 +8,16 @@ The task will be to complete two methods in `extractAndTest.java` as well as the
 **DO NOT** change any of the method signatures from those given in the assignment, and read the instructions carefully. 
 
 ## `extractAndSearch.java`
-### `public static int[][] extractSubArray(int[][] inArray, int rowMin, int rowMax, int colMin, int colMax)`
-This method will create a new 2-D integer array of size `rowMax-rowMin+1` by `colMax-rowMin+1`, from the given input array. 
+### `extractSubArray`
+The signiture of this method will be `public static int[][] extractSubArray(int[][] inArray, int rowMin, int rowMax, int colMin, int colMax)`;
+This method will return a new 2-D integer array which contains a subset of the information in the given input array. 
 The input array may be jagged. 
-The output will match the coresponding locations of the input, i.e. the values from the `0`th column of the output will correspond to the `colMin`th column of the input. 
+The output will:
+* be of size `rowMax-rowMin+1` by `colMax-rowMin+1`, and 
+* match the coresponding locations of the input, i.e. the values from the `0`th column of the output will correspond to the `colMin`th column of the input. 
 
-The method will return `null` if either of the following are true:
+If the requested array cannot be extracted, the method will return `null`. 
+That is, it returns `null` if either of the following are true:
 * the maximum index (row or column) is *less* than the minimum (note equal is okay). 
 * the ranges given are invalid for the input array (i.e. `inputArray[i][j]` does not exist for some `rowMin ≤ i ≤ rowMax` and `colMin ≤ j ≤ colMax`).
 
@@ -42,7 +46,8 @@ since rows `0` and `2` do not contain enough columns.
 using the same `inputArray` if `minRow`,`maxRow`,`minCol`,and `maxCol` are `2`,`0`,`0`,`1` respectively 
 the method would also return `null` since the row limits are in the wrong order. 
 
-### `public static boolean noneTrue(boolean[][] boolArray)`
+### `noneTrue`
+The signiture of this method will be `public static boolean noneTrue(boolean[][] boolArray)`.
 This method searches the 2-dimensional boolean array (possibly jagged) to see if any of the values are `true`. 
 If any of the values are `true` the method returns `false`, otherwise it returns `true`.
 Notice that the previous sentence does not say that it returns `true` if all of the values are `false`, 
