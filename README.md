@@ -13,7 +13,7 @@ The signiture of this method will be `public static int[][] extractSubArray(int[
 This method will return a new 2-D integer array which contains a subset of the information in the given input array. 
 The input array may be jagged. 
 The output will:
-* be of size `rowMax-rowMin+1` by `colMax-rowMin+1`, and 
+* be of size `rowMax-rowMin+1` by `colMax-colMin+1`, and 
 * match the coresponding locations of the input, i.e. the values from the `0`th column of the output will correspond to the `colMin`th column of the input. 
 
 If the requested array cannot be extracted, the method will return `null`. 
