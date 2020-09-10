@@ -38,6 +38,23 @@ public class tester{
     int[][] input = {{1,2},{3,4,5},{6,7}};
     assertNull(extractAndTest.extractSubArray(input, 0, 1, 0, 2));
   }
+
+  @Test
+  public void invalidLocationsYTooBig2() {
+    int[][] input = {{1, 2, 3},{1, 2},{6,7, 8}};
+    int[][] output = {{1,2},{1, 2},{6,7}};
+
+    assertArrayEquals(output, extractAndTest.extractSubArray(input, 0, 2, 0, 1));
+    assertNull(extractAndTest.extractSubArray(input, 0, 2, 0, 2));
+  }
+
+  @Test
+  public void invalidLocationsYTooBig3() {
+    int[][] input = {{1, 2, 3},{1, 2, 3},{6,7, 8}};
+    int[][] output = {{1,2, 3},{1, 2, 3},{6,7, 8}};
+
+    assertArrayEquals(output, extractAndTest.extractSubArray(input, 0, 2, 0, 2));
+  }
   
   @Test
   public void hasTrue() {
