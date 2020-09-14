@@ -5,16 +5,15 @@ public class extractAndTest {
     if (rowMin > rowMax  || colMin > colMax) {
       return null;
     }
-    int[][] subArr = new int[rowMax-rowMin+1][colMax-rowMin+1];
+    int[][] subArr = new int[rowMax-rowMin+1][colMax-colMin+1];
 
 
-
-    for(int i = rowMin; i < subArr.length; i++){
-      if(subArr[i].length > inArray[i].length){
+    for(int i = 0; i < subArr.length; i++){
+      if(subArr[i].length > inArray[i+rowMin].length){
         return null;
       }
-      for(int j = colMin; j < subArr[i].length; j++){
-        subArr[i][j] = inArray[i][j];
+      for(int j = 0; j < subArr[i].length; j++){
+        subArr[i][j] = inArray[i + rowMin][j + colMin];
       }
     }
 
