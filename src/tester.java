@@ -50,8 +50,24 @@ public class tester{
 
   @Test
   public void invalidLocationsYTooBig3() {
-    int[][] input = {{1, 2, 3},{1, 2, 3},{6,7, 8}};
-    int[][] output = {{1,2, 3},{1, 2, 3},{6,7, 8}};
+    int[][] input = {
+            {1, 2, 3},
+            {1, 2, 3},
+            {6,7, 8}};
+    int[][] output = {
+            {1, 2, 3},
+            {6,7, 8}};
+
+    assertArrayEquals(output, extractAndTest.extractSubArray(input, 1, 2, 0, 2));
+  }
+
+  @Test
+  public void rowMinGreaterThanZero() {
+    int[][] input = {
+            {1, 2, 3, 5},
+            {1, 2, 3},
+            {6, 7, 8, 9}};
+    int[][] output = {{1, 2, 3}, {1, 2, 3}, {6, 7, 8}};
 
     assertArrayEquals(output, extractAndTest.extractSubArray(input, 0, 2, 0, 2));
   }
